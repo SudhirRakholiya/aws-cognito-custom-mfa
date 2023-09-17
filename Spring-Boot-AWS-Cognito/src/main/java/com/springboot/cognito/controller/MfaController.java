@@ -19,7 +19,7 @@ public class MfaController {
 	@Autowired
 	private UserService usersService;
 	
-	@Description("This API is for enable MFA")
+	@Description("This API is for enable MFA") 
 	@PostMapping(path = "/enable-mfa")
     public ResponseEntity<?> enableMfa(HttpServletRequest request,@RequestBody EnableMFADto enableMFADto) {
 		return ResponseEntity.ok().body(usersService.enableMFA(request,enableMFADto));
